@@ -1,0 +1,96 @@
+VIRTUALENV 
+>virtualenv  -FolderName-
+
+
+Acativate:
+> Script/activate.
+>deactivate
+
+GITHUB
+>Branch /work_pc
+>PUSH https://github.com/shawnp/mvp work_pc
+>PULL -SAME
+>git remote add origin git@github.com:shawnp/hello_webapp.git
+>git config --global user.name "shawnp"
+>git config OPTIONS
+
+POWER SHELL
+>Get-childitem -Force  -see hidden files
+>
+
+
+
+DJANGO
+>django-admin startproject -FolderName-
+>python manage.py-
+migrate
+createsuperuser
+
+
+PIP
+>install south
+>install django_debug_toolbar
+
+DJANGO_TOLBAR
+>debug_toolbar.middleware.DebugToolbarMiddleware', 
+> 'debug_toolbar',
+
+Compass -django
+https://pypi.python.org/pypi/django-compass2/0.2
+> pip install django-compass2
+
+-settings.py
+
+COMPASS_INPUT = PROJECT_ROOT + 'media/sass'
+COMPASS_OUTPUT = PROJECT_ROOT + 'media/css'
+COMPASS_STYLE = 'compact'
+COMPASS_REQUIRES = (
+    'ninesixty',  # 960.gs Grid System
+)
+
+-settings.py
+
+#Compile
+>python manage.py compass 
+
+#Usage
+
+The command-line interface is very simple. To see available options and commands try:
+
+$ python manage.py compass --help
+Basically the syntax is as simple as:
+
+$ python manage.py compass <primary_command>
+Just compile your Sass into CSS:
+
+$ python manage.py compass
+   exists media/css
+unchanged media/sass/style.sass
+The above command is more or less equivalent to invoking:
+
+compass --sass-dir media/sass --css-dir media/css --output-style compact
+Monitor your Sass continuously:
+
+$ python manage.py compass watch
+>>> Compass is watching for changes. Press Ctrl-C to Stop.
+>>> Change detected to: .../media/sass/style.sass
+overwrite media/css/style.css
+...
+Which is something like:
+
+compass --sass-dir media/sass --css-dir media/css --output-style compact --watch
+
+
+#########
+#LINKS
+http://www.rubydoc.info/gems/ruby-virtualenv/0.5.1
+https://honza.ca/2011/06/install-ruby-gems-into-virtualenv
+http://compass-style.org/blog/2011/05/09/compass-django/
+http://pythonomicon.com/?post=Setting%20up%20Compass,%20Sass%20and%20Django
+https://djangosteps.wordpress.com
+http://www.dontfeartheinternet.com/
+http://learn.shayhowe.com/html-css/
+http://pyvideo.org/
+
+
+ 
