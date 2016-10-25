@@ -1,16 +1,36 @@
 {% load staticfiles %}
-<DOCTYPE html>
+{% load humanize %}
+<!doctypehtml>
 <html>
-	<head>
+<head>
+	<title>
 		{% block title %}
 			My Hello Web App Project
-		{% endblock title %}
-		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-		{% block header %}{% endblock header%}
-	</head>
-	<body>
-		{% block content %}{% endblock content%}
-		{% block footer %}{% endblock footer%}
+		{% endblock title%}
 
+	</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	{% block header %}{% endblock header%}
+</head>
+	<body>
+		<header>
+			<h1>Hello Web App</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="{% url 'home' %}">Home</a>
+					</li>
+					<li>
+						<a href="{% url 'about' %}">About</a>
+					</li>
+					<li>
+						<a href="{% url 'contact' %}">Contact</a>
+					</li>
+			</nav>
+
+		</header>
+		{% block content %}{% endblock content%}	
+		{% block footer %}{% endblock footer%}	
 	</body>
+
 </html>

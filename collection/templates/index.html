@@ -1,6 +1,14 @@
-{% extends 'layouts/base.html' %}
-{% block title %} Homepage - {{block.super }}{% endblock title %}
+{% extends 'layouts/base.html'%}
+{% load humanize %}
+{% block title %} HomePage - {{ block.super}} {% endblock %}
 {% block content %}
-	<h1>Hello World</h1>
-	<p>I am a bacis website.</p>
-{% endblock %}
+	<h1> Hello index page! </h1>
+	<p>There are {{number|apnumber}} dogs!</p>
+	<p> This is my name|slugify: {{ thing|slugify }}</p>
+	<p> This is my name: {{ thing }}</p>
+	<p> This is my name|title: {{ thing|title }}</p>
+	
+	<p>Page 44</p>
+
+
+{% endblock content %}
