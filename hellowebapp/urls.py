@@ -23,9 +23,10 @@ from django.views.generic import TemplateView
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [
-        url(r'^__debug__/', include(debug_toolbar.urls)),
-        url(r'^$', views.index, name='home'),
-        url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
-        url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
-        url(r'^admin/', admin.site.urls),
+    url(r'^__debug__/', include(debug_toolbar.urls)),
+    url(r'^$', views.index, name='home'),
+    url(r'^about/$', TemplateView.as_view(template_name='about.html'),name='about'),
+    url(r'^contact/$', TemplateView.as_view(template_name='contact.html'),name='contact'),
+    url(r'^admin/', admin.site.urls),
 ]
+
