@@ -91,6 +91,7 @@ https://djangosteps.wordpress.com
 http://www.dontfeartheinternet.com/
 http://learn.shayhowe.com/html-css/
 http://pyvideo.org/
+https://www.sslshopper.com/
 
 
  

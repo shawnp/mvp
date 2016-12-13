@@ -2,13 +2,15 @@
 {% load humanize %}
 {% block title %} HomePage - {{ block.super}} {% endblock %}
 {% block content %}
-	<h1> Hello index page! </h1>
-	<p>There are {{number|apnumber}} dogs!</p>
-	<p> This is my name|slugify: {{ thing|slugify }}</p>
-	<p> This is my name: {{ thing }}</p>
-	<p> This is my name|title: {{ thing|title }}</p>
+	{% for thing in things	%}
+			<p>{{thing.name}}
+			<p>{{thing.description}}
+			<p>{{thing.slug}}
+				<hr></hr>
+	{% endfor %} 
 	
-	<p>Page 44</p>
-
-
+	
+</br>
+<p>Page 44</p>
 {% endblock content %}
+
