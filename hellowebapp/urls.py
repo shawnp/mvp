@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+# Also edit : from collection import views as collection_views
 from collection import views
 from django.views.generic import TemplateView
 
@@ -28,6 +29,7 @@ if settings.DEBUG:
     url(r'^about/$', TemplateView.as_view(template_name='about.html'),name='about'),
     url(r'^contact/$', TemplateView.as_view(template_name='contact.html'),name='contact'),
     url(r'^things/ (?P<slug>[-\w]+) /$','collection.views.thing_detail', name='thing_detail'),
+    # To correct the Deprecation error: url(r'^things/ (?P<slug>[-\w]+) /$',collection_views.thing_detail), 
     url(r'^admin/', admin.site.urls),
 ]
 
